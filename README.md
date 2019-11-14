@@ -59,3 +59,13 @@ See below the results of the experiments presented in the paper:
 
 ### Generated Samples
 ![FID Score](./images/fashionmnist_samples.png)
+
+
+### Changes to make:
+https://stackoverflow.com/questions/55124407/output-and-broadcast-shape-mismatch-in-mnist-torchvision
+change this line in /evolution/gan_train.py:
+```
+transform = transforms.Compose([transforms.ToTensor(),
+  transforms.Normalize((0.5,), (0.5,))
+])
+```
